@@ -15,8 +15,23 @@ def get_all_combinations(matrix, paths, path=[], x=0):
 if __name__ == '__main__':
     m = [[1,2,3], [1,2], [1,2,3,4,5]]
     paths = []
-    x = 0
 
     get_all_combinations(m, paths)
 
-    print(paths)
+    print('Combinations returned by get_all_combinations: ' + str(len(paths)))
+    print('actual possible combinations: ' + str(3 * 2 * 5))
+
+    m = [[1,2], [1,2]]
+    paths = []
+    get_all_combinations(m, paths)
+
+    print('Combinations returned by get_all_combinations: ' + str(len(paths)))
+    print('actual possible combinations: ' + str(2 * 2))
+
+
+    m = [[1,2,3,4,5,6], [1,2,3], [1,2,3,4,5,6,7,8], [1,2,3,4,5], [1,2,3,4,5,6,7,8,9]]
+    paths = []
+    get_all_combinations(m, paths)
+
+    print('Combinations returned by get_all_combinations: ' + str(len(paths)))
+    print('actual possible combinations: ' + str(6*3*8*5*9))
